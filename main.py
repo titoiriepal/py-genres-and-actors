@@ -19,7 +19,6 @@ def main() -> QuerySet[Actor]:
     for actor in actors:
         Actor.objects.create(first_name=actor[0], last_name=actor[1])
 
-
     genre_to_update = Genre.objects.get(name="Dramma")
     genre_to_update.name = "Drama"
     genre_to_update.save()
